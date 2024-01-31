@@ -6,7 +6,6 @@ import { VeiculoComponent } from './view/veiculo/veiculo.component';
 import { CondutorComponent } from './view/condutor/condutor.component';
 import { CadastroTempoComponent } from './view/cadastro-tempo/cadastro-tempo.component';
 import { PagamentoComponent } from './view/pagamento/pagamento.component';
-import {ReciboComponent} from "./view/recibo/recibo.component";
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -15,8 +14,7 @@ export const routes: Routes = [
     { path: 'condutores', component: CondutorComponent },
     { path: 'tempos', component: CadastroTempoComponent },
     { path: 'pagamentos', component: PagamentoComponent },
-    { path: 'pagamentos/:id', component: PagamentoComponent },
-    { path: 'recibos/:id,:id', component:  ReciboComponent}
+    { path: 'pagamentos/:id', component: PagamentoComponent }
 ];
 
 @NgModule({
