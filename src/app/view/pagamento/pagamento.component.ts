@@ -121,16 +121,13 @@ export class PagamentoComponent implements OnInit {
     });
   }
 
-  salvar() {   
-    this.pagamento.tempoId = this.tempo.id;
-
+  salvar() {
     this.service
     .add(this.pagamento)
     .subscribe({
       next: (response) => {
         this.exibeMensagem = true;
         this.textoMensagem = 'Pagamento realizado com sucesso.';
-        this.router.navigate(['/recibos', response.id]);
       },
       error: (responseError) => {
         this.exibeMensagem = true;
@@ -139,4 +136,9 @@ export class PagamentoComponent implements OnInit {
       }
     });
   }
+
+  enviarParaFilho() {
+    this.router.navigate(['/recibos', this.idTempo, this.pagamento]);
+  }
+
 }
