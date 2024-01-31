@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { TestBed } from '@angular/core/testing';
 
 import { PagamentoService } from './pagamento.service';

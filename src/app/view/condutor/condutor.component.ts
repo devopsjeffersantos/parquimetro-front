@@ -41,6 +41,8 @@ export class CondutorComponent implements OnInit  {
       .subscribe({
         next: (response) => {
           this.listaDeCondutores = response;
+          console.log('next: ' + response);
+          console.log(JSON.stringify(this.listaDeCondutores));
         },
         error: (responseError) => {
           console.log('error: ' + JSON.stringify(responseError));
@@ -54,6 +56,7 @@ export class CondutorComponent implements OnInit  {
       .subscribe({
         next: (response) => {
           this.veiculos = response;
+          console.log('next: ' + response);
         },
         error: (responseError) => {
           console.log('error: ' + JSON.stringify(responseError));
